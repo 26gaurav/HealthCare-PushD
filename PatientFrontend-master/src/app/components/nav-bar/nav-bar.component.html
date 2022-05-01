@@ -1,0 +1,62 @@
+<!-- <mat-toolbar color="secondary">
+    <span>
+        <a mat-button routerLink="/">Back To Home</a>
+    </span>
+
+    <span class = "example-spacer"></span>
+
+    <a *ngIf = "!loggedIn" mat-icon-button routerLink="/home">Login</a>
+
+    <a *ngIf = "!loggedIn" mat-icon-button routerLink="/home">Register</a>
+
+    <a *ngIf="loggedIn" (click)="logOutUser()" mat-icon-button routerLink="/home">Log out</a>
+ 
+</mat-toolbar> -->
+
+<span class="bckg"></span>
+<header>
+  <h1>Dashboard</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="dashboard" data-title="Home">Home</a>
+      </li>
+      <li>
+        <a href="messages1" data-title="Diary">Messages</a>
+      </li>
+      <li>
+        <a href="tasks" data-title="Message">Tasks</a>
+      </li>
+      <li>
+        <a href="progress" data-title="Progress">Progress</a>
+      </li>
+      <li>
+        <a href="messages" data-title="Settings">Deactivate</a>
+      </li>
+      <!-- <li>
+        <a href="javascript:void(0);" data-title="Search">Search</a>
+      </li> -->
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="title">
+    <h2>{{fname}}</h2>
+    <a type="button" (click)="logOutUser()">Logout</a>
+  </div>
+
+  <!-- <article class="larg">
+    <div>
+      <h3>Project 1 <span class="entypo-down-open"></span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iste quia incidunt ad provident ullam quo assumenda expedita quae sapiente ipsa qui esse similique! Modi obcaecati natus sapiente quaerat omnis.</p>
+    </div>
+    <div>
+      <h3>Project 2 <span class="entypo-down-open"></span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iste quia incidunt ad provident ullam quo assumenda expedita quae sapiente ipsa qui esse similique! Modi obcaecati natus sapiente quaerat omnis.</p>
+    </div>
+    <div>
+      <h3>Project 3 <span class="entypo-down-open"></span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iste quia incidunt ad provident ullam quo assumenda expedita quae sapiente ipsa qui esse similique! Modi obcaecati natus sapiente quaerat omnis.</p>
+    </div>
+  </article> -->
+</main>

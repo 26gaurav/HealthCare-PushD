@@ -1,0 +1,135 @@
+<app-nav-bar></app-nav-bar>
+
+<section class="wrapper">
+<!-- modal pop up code begins -->
+
+<div class="hey" *ngIf="!moodSubmitted" >
+<button type="button" class="btn btn-danger" (click)="openModal(template)">Enter Mood</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- below is the consent button! -->
+<div color="red" *ngIf="isConsent.match('0')" style="color:rgb(55, 0, 255)">No Permissions</div>
+<div color="red" *ngIf="isConsent.match('1')" style="color:red">Permission from {{consentDetails.fname}} {{consentDetails.lname}}</div>
+<div color="red" *ngIf="isConsent.match('2')" style="color:green">You Granted Permission To {{consentDetails.fname}} {{consentDetails.lname}}</div>
+<div color="red" *ngIf="isConsent.match('3')" style="color:red">Permission Rejected for {{consentDetails.fname}} {{consentDetails.lname}}</div>
+<button type="button" class="btn btn-info" [disabled]="isConsent.match('0')"(click)="grantPermission()"><div *ngIf="!isConsent.match('2')">Give</div><div *ngIf="isConsent.match('2')">Revoke</div> Consent</button>
+<!-- above is the consent button -->
+
+<!--******************************** Modal STARTS HERE********************************* -->
+<!--Modal class for Specialist Order-->
+<!-- <div class="modal fade" data-backdrop="false" id="modalSpecialistForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" >
+  <div class="modal-dialog" role="document" style="margin-left:28%">
+    <div class="modal-content" style="width:750px;">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Consent</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-center">
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- ****************************Modal ENDS HERE ********************************** -->
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Please Enter Your Current Mood!</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+  <div id="app">
+    <div class="mood" id="mood-great">
+      <div class="face">
+        <div class="eyes-cover">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+      <div class="mood-name"><a type="button" (click)="setMood(3)">great</a></div>
+    </div>
+    <div class="mood" id="mood-okay">
+      <div class="face">
+        <div class="eyes-cover">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+      <div class="mood-name"><a type="button" (click)="setMood(2)">neutral</a></div>
+    </div>
+    <div class="mood" id="mood-bad">
+      <div class="face">
+        <div class="eyes-cover">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+      <div class="mood-name"><a type="button" (click)="setMood(1)">sad</a></div>
+    </div>
+  </div>
+  </div>
+
+
+</ng-template>
+
+
+
+
+
+<!-- modal pop up code ends -->
+<html>
+  <head>
+    <title>jQuery Show/Hide text Toggle Example</title>
+  </head>
+  <body class="con">
+    <span class="show-text">
+      Everyone feels sad or low sometimes, but these feelings usually pass with a little time. 
+      Depression (also called major depressive disorder or clinical depression) is different. 
+      It can cause severe symptoms that affect how you feel, think, and handle daily activities, such as sleeping, eating, or working.
+      It is an illness that can affect anyone—regardless of age, race, income, culture, or education. 
+      Research suggests that genetic, biological, environmental, and psychological factors play a role in depression.
+    </span>
+    <br><br>
+    <span class="show-text">
+      Depression may occur with other mental disorders and other illnesses, such as diabetes, cancer, heart disease, and chronic pain.
+      Depression can make these conditions worse, and vice versa. 
+      Sometimes medications taken for these illnesses cause side effects that contribute to depression symptoms.
+      </span>
+    <br><br>
+    <span class="show-text">
+      To be diagnosed with depression, an individual must have five depression symptoms every day, nearly all day, for at least 2 weeks. One of the symptoms must be a depressed mood or a loss of interest or pleasure in almost all activities. 
+      Children and adolescents may be irritable rather than sad.
+
+      If you think you may have depression, talk to your health care provider. 
+      Primary care providers routinely diagnose and treat depression and refer individuals to mental health professionals, such as psychologists or psychiatrists.</span>
+
+      <br>
+      <!-- <br> -->
+      <section style="text-align: center;">
+        <button type="button"  class="btn btn-outline-success" (click)="bored()">Click to kill boredom!</button>
+        <br><br>
+        <h3>{{this.activity}}</h3>
+      </section>
+  </body>
+  
+</html>
+
+</section>
