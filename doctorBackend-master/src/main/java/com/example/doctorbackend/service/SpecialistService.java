@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Service
 public class SpecialistService {
-
+//Service Layer for Specialist
     @Autowired
     SpecialistRepository specialistRepository;
 

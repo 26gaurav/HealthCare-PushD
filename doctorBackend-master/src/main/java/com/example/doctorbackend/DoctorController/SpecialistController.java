@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin(origins="*")
 public class SpecialistController {
-
+//Specialist Controller
     @Autowired
     private SpecialistService specialistService;
 
@@ -24,6 +24,7 @@ public class SpecialistController {
     @Autowired
     private DashboardService dashboardService;
 
+//    Login Controller of Specialist
     @PostMapping("/specialist/login")
     public ResponseEntity<?> login(@RequestBody Map<String, Object> payload){
         Specialist specialist = specialistService.login(payload);
@@ -33,6 +34,7 @@ public class SpecialistController {
         return ResponseEntity.ok(specialist);
     }
 
+//    Fetching all Doctors for Specialist
     @GetMapping("/specialist/doctorList/{spec_id}")
     public List<Doctor> getAllDoctor(@PathVariable Long spec_id){
         List<Doctor> doctorList = specialistService.getAllDoctor(spec_id);
@@ -43,11 +45,13 @@ public class SpecialistController {
         return doctorList;
     }
 
+//    Fetching all patientlist in a doctor for Specialist
     @GetMapping("/specialist/patientlistbyDoctor/{doc_id}/{spec_id}")
     public List<Patient> getPatientByDoctorIdforSpecialist(@PathVariable Long doc_id, @PathVariable Long spec_id){
         return specialistService.getPatientByDoctorIdforSpecialist(doc_id, spec_id);
     }
 
+//    Asking and checking for permissions
     @GetMapping("/specialist/askPermision/{spec_id}/{pat_id}")
     public ResponseEntity<?> askPermission(@PathVariable Long spec_id, @PathVariable Long pat_id){
         if(specialistService.askForPermission(spec_id, pat_id))
@@ -56,7 +60,7 @@ public class SpecialistController {
             return ResponseEntity.badRequest().body(new Response(("Permission already sent!")));
     }
 
-//    *******************PATIENT RESPONSE*****************************
+//    *******************PATIENT RESPONSES FOR SPECIALIST*****************************
 
 
     @GetMapping("/specialist/doctor/response/questions/{sectionId}")
