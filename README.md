@@ -9,7 +9,7 @@ This email id is also needed for subsequent interactions/notifications.Certain a
 
 -> PATIENT
 
-The patient/user can optionally connect themselves to a doctor using a code obtained fromthe doctor. This will allow the doctor to monitor their progress, communicate with them etc.
+The patient/user can connect themselves to a doctor using a link obtained from the doctor. This will allow the doctor to monitor their progress, communicate with them etc.
 No other doctor will be able to see the specific information about the user.
 
 The app enables a structured navigation through the content of the app, which is organized asa series of sections, each with sub-sections.
@@ -27,11 +27,12 @@ Patient will able to deactivate himself/herself completely from the app which wi
 
 Dashboard for a doctor to get an overview and manage their patients
 
-A doctor can generate a code for each patient and share with them, to be used to connectpatient to doctor. Other mechanisms for this will also be explored.
+A doctor can generate a code/link for each patient and patient will get the code/link in the mailID that will be used to connect patient to doctor. Other mechanisms for this will also be explored.
 
 A doctor can see the list of patients under their care, and be able to filter outactive/inactive/completed status.
 
-For each patient, the doctor can get a snapshot of their progress, and some statistics onusage. There is a message type chat service for the doctor to get notes from the patient and to also providefeedback.
+For each patient, the doctor can get a snapshot of their progress, and some statistics onusage. There is a message type chat service for the doctor to get notes from the patient and to also providefeedback. The service is also having read receipt funcationality which allow doctor to see patient in 
+sorted order of recent unread msg.
 
 The doctor can “plan” the set of sections and the sequence that guides the patientʼsnavigation through the app.
 Doctor can also force reset the section order set.
