@@ -50,3 +50,11 @@ A Patient can enable read access to their data to the specialist.
 -> ADMIN
 
 Admin role to manage doctors and specialist etc.
+
+
+-> TECHNOLOGIES USED
+• Front-end : Angular, Typescript, JavaScript, HTML5/CSS, Bootstrap
+• Back-end : Java Spring boot (MVC model), Java Web services
+(RESTFUL), JSON Web Tokens (JWT) Authorization
+• Database : MySQL Server
+• Version Control : Git an
